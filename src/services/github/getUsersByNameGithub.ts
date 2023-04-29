@@ -1,4 +1,5 @@
 import axios from "axios";
+import { AppError } from "../../shared/middlewares/errors/error";
 
 interface IUsers {
   id: number;
@@ -21,6 +22,7 @@ class GetUsersByNameGithub {
   }
 
   async execute(name: String): Promise<IUsers> {
+    
     const loadUsers = await this.loadUsers(name);
 
     return loadUsers.items.map((user) => {

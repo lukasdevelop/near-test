@@ -1,5 +1,6 @@
 import { AxiosError } from "axios"
 import { GetUsersByNameGithub } from "./getUsersByNameGithub"
+import { AppError } from "../../shared/middlewares/errors/error"
 
 describe("Get Users of GitHub", () => {
     let getRepoGithub: GetUsersByNameGithub
@@ -30,12 +31,12 @@ describe("Get Users of GitHub", () => {
         expect(users[0]).toHaveProperty("id")
     })
 
-    it("should not be list null or undefined user", async () => {
+    it("should not be list with name null", async () => {
         const name = ""
   
         await expect(
             getRepoGithub.execute(name)
-        ).rejects.toEqual(new Error())
+        ).rejects.toEqual(new AppError("Name not be null."))
 
     })
 })

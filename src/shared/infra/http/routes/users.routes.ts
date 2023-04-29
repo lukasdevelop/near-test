@@ -1,21 +1,10 @@
 import { Router } from 'express'
-import { GetUsersByNameGithub } from '../../../../services/github/getUsersByNameGithub'
+import { ListUsersController } from '../../../../modules/users/useCases/listUsers/ListUsersController'
 
-let all: GetUsersByNameGithub
+const listUsersController = new ListUsersController()
 
 const usersRoutes = Router()
 
-usersRoutes.get('/', async (req, res) => {
-
-    const name = 'lukasdevelop'
-
-    all = new GetUsersByNameGithub()
-
-    const users = await all.execute(name)
-
-    console.log(users)
-
-    return res.status(201).send()
-})
+usersRoutes.get('/', listUsersController.handle)
 
 export { usersRoutes }
