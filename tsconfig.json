@@ -1,8 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es2017",                                
+    "target": "es2017",
+    "experimentalDecorators": true, 
+    "emitDecoratorMetadata": true,                                
     "module": "commonjs",
-    "allowJs": true,                                
+    "baseUrl": "./src",
+    "allowJs": true,
+    "resolveJsonModule": true, 
+     "outDir": "./dist",                                  
     "esModuleInterop": true,                                                                                         
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true                                 
