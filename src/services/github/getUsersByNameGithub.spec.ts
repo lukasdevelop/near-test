@@ -1,6 +1,5 @@
-import { AxiosError } from "axios"
 import { GetUsersByNameGithub } from "./getUsersByNameGithub"
-import { AppError } from "../../shared/middlewares/errors/error"
+import { BadRequestError } from "../../helpers/api-error"
 
 describe("Get Users of GitHub", () => {
     let getRepoGithub: GetUsersByNameGithub
@@ -36,7 +35,7 @@ describe("Get Users of GitHub", () => {
   
         await expect(
             getRepoGithub.execute(name)
-        ).rejects.toEqual(new AppError("Name not be null."))
+        ).rejects.toEqual(new BadRequestError("Name is required"))
 
     })
 })
