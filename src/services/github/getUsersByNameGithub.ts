@@ -9,7 +9,7 @@ interface IUsers {
 }
 
 class GetUsersByNameGithub {
-  async loadUsers(name: String) {
+  async loadUsers(name: String): Promise<any> {
     try {
       const result = await axios.get(
         `https://api.github.com/search/users?q=${name}`
