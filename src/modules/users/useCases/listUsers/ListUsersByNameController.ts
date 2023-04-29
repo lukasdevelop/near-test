@@ -2,7 +2,7 @@ import {Request, Response } from "express";
 import { GetUsersByNameGithub } from "../../../../services/github/getUsersByNameGithub";
 
 let getUsersByNameGithub: GetUsersByNameGithub
-class ListUsersController {
+class ListUsersByNameController {
      async handle(request: Request, response: Response) {
 
       const { name } = request.body
@@ -16,4 +16,4 @@ class ListUsersController {
   }
 }
 
-export { ListUsersController };
+export { ListUsersByNameController };

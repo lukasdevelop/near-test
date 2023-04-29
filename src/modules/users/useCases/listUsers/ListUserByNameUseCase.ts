@@ -1,0 +1,6 @@
+
+class ListUsersByNameUseCase {
+
+}
+
+export { ListUsersByNameUseCase }

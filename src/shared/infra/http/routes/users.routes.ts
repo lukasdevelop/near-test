@@ -1,10 +1,10 @@
 import { Router } from 'express'
-import { ListUsersController } from '../../../../modules/users/useCases/listUsers/ListUsersController'
+import { ListUsersByNameController } from '../../../../modules/users/useCases/listUsers/ListUsersByNameController'
 
-const listUsersController = new ListUsersController()
+const listUsersByNameController = new ListUsersByNameController()
 
 const usersRoutes = Router()
 
-usersRoutes.get('/', listUsersController.handle)
+usersRoutes.get('/', listUsersByNameController.handle)
 
 export { usersRoutes }

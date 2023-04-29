@@ -1,6 +1,4 @@
 import axios from "axios";
-import { BadRequestError } from "../../helpers/api-error";
-
 interface IUsers {
   id: number;
   name: string;
@@ -11,9 +9,7 @@ interface IUsers {
 
 class GetUsersByNameGithub {
   private async loadUsers(name: String): Promise<any> {
-    if (!name) {
-      throw new BadRequestError("Name is required");
-    }
+
     const result = await axios.get(
       `https://api.github.com/search/users?q=${name}`
     );
