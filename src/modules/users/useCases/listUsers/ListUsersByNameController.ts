@@ -1,17 +1,17 @@
 import {Request, Response } from "express";
-import { GetUsersByNameGithub } from "../../../../services/github/getUsersByNameGithub";
+import { container } from 'tsyringe';
+import { ListUsersByNameUseCase } from "./ListUserByNameUseCase";
 
-let getUsersByNameGithub: GetUsersByNameGithub
 class ListUsersByNameController {
-     async handle(request: Request, response: Response) {
+     async handle(request: Request, response: Response): Promise<Response> {
 
       const { name } = request.body
       
-      getUsersByNameGithub = new GetUsersByNameGithub()
+      const listUserByNameUseCase = container.resolve(ListUsersByNameUseCase)
 
-      const users = await getUsersByNameGithub.execute(name)
+      const users = await listUserByNameUseCase.execute(name)
 
-      return response.status(200).json({users})
+      return response.status(200).json(users)
    
   }
 }
