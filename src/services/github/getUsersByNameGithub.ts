@@ -1,5 +1,5 @@
 import axios from "axios";
-import { AppError } from "../../shared/middlewares/errors/error";
+import { BadRequestError } from "../../helpers/api-error";
 
 interface IUsers {
   id: number;
@@ -10,19 +10,17 @@ interface IUsers {
 }
 
 class GetUsersByNameGithub {
-  async loadUsers(name: String): Promise<any> {
-    try {
-      const result = await axios.get(
-        `https://api.github.com/search/users?q=${name}`
-      );
-      return result.data;
-    } catch (error) {
-      throw new Error(error);
+  private async loadUsers(name: String): Promise<any> {
+    if (!name) {
+      throw new BadRequestError("Name is required");
     }
+    const result = await axios.get(
+      `https://api.github.com/search/users?q=${name}`
+    );
+    return result.data;
   }
 
   async execute(name: String): Promise<IUsers> {
-    
     const loadUsers = await this.loadUsers(name);
 
     return loadUsers.items.map((user) => {

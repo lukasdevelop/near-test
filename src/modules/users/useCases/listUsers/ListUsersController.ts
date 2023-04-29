@@ -1,12 +1,17 @@
-import axios from "axios";
 import {Request, Response } from "express";
-import { errorMiddleware } from "../../../../shared/middlewares/errors/error";
-import { ApiError, BadRequestError } from "../../../../helpers/api-error";
+import { GetUsersByNameGithub } from "../../../../services/github/getUsersByNameGithub";
 
+let getUsersByNameGithub: GetUsersByNameGithub
 class ListUsersController {
      async handle(request: Request, response: Response) {
 
-      throw new BadRequestError("Erro lancado do app error");
+      const { name } = request.body
+      
+      getUsersByNameGithub = new GetUsersByNameGithub()
+
+      const users = await getUsersByNameGithub.execute(name)
+
+      return response.status(200).json({users})
    
   }
 }
