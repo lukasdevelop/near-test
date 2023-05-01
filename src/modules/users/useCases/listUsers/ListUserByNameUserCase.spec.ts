@@ -3,6 +3,7 @@ import { ListUsersByNameUseCase } from "./ListUserByNameUseCase"
 import { UsersRepository } from "@modules/users/repositories/implementations/UsersRepository"
 import { BadRequestError } from "@helpers/api-error"
 
+
 let listUserByNameUserCase: ListUsersByNameUseCase
 let usersRepository: UsersRepository
 

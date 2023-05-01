@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import { ApiError } from "../../../helpers/api-error";
+import { ApiError } from "@helpers/api-error";
 
 export const errorMiddleware = (error: Error & Partial<ApiError>, request: Request, response: Response, next: NextFunction) => {
     const statusCode = error.statusCode ?? 500

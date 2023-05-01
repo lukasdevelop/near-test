@@ -1,0 +1,85 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Teste para NEAR",
+    "description": "This is an API Teste Near",
+    "version": "1.0.0",
+    "contact": {
+      "email": "analista.sistemas.lucas@gmail.com"
+    }
+  },
+  "paths": {
+    "/users/{name}": {
+      "get": {
+        "tags": ["User"],
+        "summary": "List users by name",
+        "description": "List all users by name",
+        "responses": {
+            "200":{
+                "description": "Success",   
+                "content":{
+                    "application/json": {
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "imagem": {
+                                  "type": "string"
+                                },
+                                "site": {
+                                  "type": "string"
+                                },
+                                "admin": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                    }
+                }
+            },
+            "400": {
+                "description": "Bad Request",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "errors": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "error": {
+                                                "type": "string",
+                                                "description": "Name is required."
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+      },
+      "parameters": [
+        {
+            "name": "name",
+            "in": "path",
+            "description": "Name of the user",
+            "required": true,
+            "type": "string"
+        }
+      ]
+    }
+  }
+}

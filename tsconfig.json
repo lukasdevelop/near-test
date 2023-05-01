@@ -10,10 +10,8 @@
       "@services/*": ["services/*"],
       "@shared/*": ["shared/*"],
       "@errors/*": ["errors/*"],
-      "@middlewares/*": ["middlewares/*"],
       "@helpers/*": ["helpers/*"]
       },
-    "allowJs": true,
     "resolveJsonModule": true, 
      "outDir": "./dist",                                  
     "esModuleInterop": true,                                                                                         

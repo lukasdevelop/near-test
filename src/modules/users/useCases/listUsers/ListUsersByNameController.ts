@@ -5,7 +5,7 @@ import { ListUsersByNameUseCase } from "./ListUserByNameUseCase";
 class ListUsersByNameController {
      async handle(request: Request, response: Response): Promise<Response> {
 
-      const { name } = request.body
+      const { name } = request.params
       
       const listUserByNameUseCase = container.resolve(ListUsersByNameUseCase)
 

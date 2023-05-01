@@ -5,6 +5,6 @@ const listUsersByNameController = new ListUsersByNameController()
 
 const usersRoutes = Router()
 
-usersRoutes.get('/', listUsersByNameController.handle)
+usersRoutes.get('/:name', listUsersByNameController.handle)
 
 export { usersRoutes }
