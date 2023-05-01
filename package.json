@@ -6,7 +6,8 @@
   "scripts": {
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
     "dev": "ts-node-dev -r tsconfig-paths/register --transpile-only --respawn --inspect --ignore-watch node_modules src/shared/infra/http/server.ts",
-    "test": "jest"
+    "test": "jest",
+    "start": "node dist/shared/infra/http/server.js"
   },
   "dependencies": {
     "axios": "^1.4.0",
