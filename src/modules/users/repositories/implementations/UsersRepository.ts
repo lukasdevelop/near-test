@@ -1,8 +1,6 @@
-import { BadRequestError } from "../../../../helpers/api-error";
-import { GetUsersByNameGithub } from "../../../../services/github/getUsersByNameGithub";
-import { User } from "../../entities/User";
+import { GetUsersByNameGithub } from "@services/github/getUsersByNameGithub";
+import { User } from "@modules/users/entities/User";
 import { IUsersRepository } from "../IUsersRepository";
-
 class UsersRepository implements IUsersRepository {
   private repository: GetUsersByNameGithub;
 

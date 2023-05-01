@@ -1,7 +1,7 @@
 import { inject, injectable } from "tsyringe";
-import { IUsersRepository } from "../../repositories/IUsersRepository";
-import { User } from "modules/users/entities/User";
-import { BadRequestError } from "../../../../helpers/api-error";
+import { IUsersRepository } from "@modules/users/repositories/IUsersRepository";
+import { User } from "@modules/users/entities/User";
+import { BadRequestError } from "@helpers/api-error";
 @injectable()
 class ListUsersByNameUseCase {
   constructor(

@@ -3,8 +3,8 @@ import "express-async-errors"
 import express from 'express'
 import { router } from './routes'
 import dotenv from 'dotenv'
-import { errorMiddleware } from '../../middlewares/errors/error'
-import '../../container'
+import { errorMiddleware } from '@shared/middlewares/errors/error'
+import '@shared/container'
 
 dotenv.config()
 
