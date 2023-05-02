@@ -9,16 +9,16 @@
 <h1>Arquitetura</h1>
 <h2>Domain-Driven Design - DDD e SOLID</h2>
 <img src="imgs/ddd.png" />
-<h3>
+<h4>
     <p>Cada dominio tem seu próprio Modulo, com sua respectiva Entidade. Assim como os Repositorios, que segue com sua Interface e a Implementação da mesma, fazendo assim a <strong>Inversão de Dependencia</strong>, quem deseja usar o repositorio deve obrigatoriamente utilizar sua Interface.</p>
     <p>Cada Modulo tem seu UseCase, separado em diretorios lidando com apenas uma função bem descrita já no seu nome de arquivo. Cada useCase acompanha seu Controller e respectivos Testes Unitarios.</p>
-</h3>
+</h4>
 <h1>Design Patterns</h1>
 <h2>Singleton</h2>
 <img src="imgs/tsrynge.png" />
-<h3>Para <strong>Injeção de Dependencias</strong> - foi utilizado a biblioteca TSYRINGE que ajuda a fazer injeção de dependências de uma forma mais simples, deixando o código menos verboso e concentrando as injeções de dependência em um único arquivo (se preferir).<h3/>
+<h4>Para <strong>Injeção de Dependencias</strong> - foi utilizado a biblioteca TSYRINGE que ajuda a fazer injeção de dependências de uma forma mais simples, deixando o código menos verboso e concentrando as injeções de dependência em um único arquivo (se preferir).</h4>
 <h1>Packages</h1>
-<h3>
+<h4>
 <ul>
 <li>Axios - Comunicação com a API do Github</li>
 <li>Express - Gerenciamento de rotas</li>
@@ -35,20 +35,21 @@
 <li>Ts-node-dev - Rodar o app localmente para utilização do Typescript</li>
 <li>PM2 - Gerenciamento do APP em Produção. * Instalado apenas no EC2 em Produção.</li>
 </ul>
-<h3>
+</h4>
+
 <h1>Instruções de build</h1>
-</h3>
- 1- Após clonar o projeto
- 2 - Instalar as dependencias: yarn ou npm install
- 3 - Tendo o docker instalado rodar o comando: docker-compose up -d
- 4 - Criar o arquivo .env como no exemplo do arquivo .env.example * Algumas variaveis já foram preenchidas aidna no arquivo .env.example sendo reais apenas para uso do teste. (tenho ciencia que não pode). 
-</>
+<ul>
+ <li>1- Após clonar o projeto</li>
+ <li>2 - Instalar as dependencias: yarn ou npm install</li>
+ <li>3 - Tendo o docker instalado rodar o comando: docker-compose up -d</li>
+ <li>4 - Criar o arquivo .env como no exemplo do arquivo .env.example * Algumas variaveis já foram preenchidas aidna no arquivo .env.example sendo reais apenas para uso do teste. (tenho ciencia que não pode).</li> 
+</ul>
 <h1>Cloud Computing</h1>
 <h2>Amazon AWS</h2>
-<h3>O app foi hospedado na AWS para demonstração de conhecimentos na nuvem.</h3>
+<h4>O app foi hospedado na AWS para demonstração de conhecimentos na nuvem.</h4>
 <h4>Link para acesso: <a href="http://54.90.95.139/users/name"> http://54.90.95.139/users/name-example </a></h4>
 <h4>Link para teste através do Swagger: <a href="http://54.90.95.139/api-docs/">http://54.90.95.139/api-docs/</a></h4>
 <h1>CI / CD</h1>
 <h2>Github Actions</h2>
-<h3>Também foi feito a CI pelo próprio Github Actions para demonstração de Integração Continua, no caso, quando é feito o push na branch Master. No EC2 também está sendo feito o a <strong>gerencia do App com o PM2.</strong></h3>
+<h4>Também foi feito a CI pelo próprio Github Actions para demonstração de Integração Continua, no caso, quando é feito o push na branch Master. No EC2 também está sendo feito o a <strong>gerencia do App com o PM2.</strong></h4>
 <h4>Arquivo main.yml para checagem: <a href="https://github.com/lukasdevelop/near-test/blob/master/.github/workflows/main.yml">main.yml</a></h4>
