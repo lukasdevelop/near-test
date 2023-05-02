@@ -30,7 +30,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           port: ${{ secrets.SSH_PORT }}
-          key: ${{ secrets.SSH_key }}
+          key: ${{ secrets.SSH_KEY }}
           source: "., !node_modules"
           target: "~/app/near-test"
           
@@ -40,5 +40,5 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           port: ${{ secrets.SSH_PORT }}
-          key: ${{ secrets.SSH_key }}
+          key: ${{ secrets.SSH_KEY }}
           script: cd ~/app/near-test && yarn && pm2 restart near
