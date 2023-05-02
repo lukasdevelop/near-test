@@ -33,3 +33,12 @@ jobs:
           key: ${{ secrets.SSH_key }}
           source: "., !node_modules"
           target: "~/app/near-test"
+          
+      - name: Update API
+      - uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          port: ${{ secrets.SSH_PORT }}
+          key: ${{ secrets.SSH_key }}
+          script: cd ~/app/near-test && yarn && pm2 restart near
