@@ -44,4 +44,5 @@ jobs:
           script: |
             cd ~/app/near-test
             yarn
+            yarn test
             pm2 restart near
