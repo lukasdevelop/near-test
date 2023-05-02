@@ -10,7 +10,7 @@
 <h2>Domain-Driven Design - DDD e SOLID</h2>
 <img src="imgs/ddd.png" />
 <h4>
-    <p>Cada dominio tem seu próprio Módulo, com sua respectiva Entidade. Assim como os Repositórios, que segue com sua Interface e a Implementação da mesma, fazendo assim a <strong>Inversão de Dependência</strong>, quem deseja usar o repositório deve obrigatóriamente utilizar sua Interface.</p>
+    <p>Cada Dominio tem seu próprio Módulo, com sua respectiva Entidade. Assim como os Repositórios, que segue com sua Interface e a Implementação da mesma, fazendo assim a <strong>Inversão de Dependência</strong>, quem deseja usar o repositório deve obrigatóriamente utilizar sua Interface.</p>
     <p>Cada Módulo tem seu UseCase, separado em diretórios lidando com apenas uma função bem descrita já no seu nome de arquivo. Cada useCase acompanha seu Controller e respectivos Testes Unitários.</p>
 </h4>
 <h1>Design Patterns</h1>
@@ -42,7 +42,7 @@
  <li>1- Após clonar o projeto</li>
  <li>2 - Instalar as dependencias: yarn ou npm install</li>
  <li>3 - Já com o docker instalado rodar o comando: docker-compose up -d</li>
- <li>4 - Criar o arquivo .env como no exemplo do arquivo .env.example * Algumas variaveis já foram preenchidas aidna no arquivo .env.example sendo reais apenas para uso do teste. (tenho ciência que não pode).</li> 
+ <li>4 - Criar o arquivo .env como no exemplo do arquivo .env.example * Algumas variaveis já foram preenchidas aidna no arquivo .env.example apenas para avaliação do teste. (tenho ciência que não pode).</li> 
 </ul>
 <h1>Cloud Computing</h1>
 <h2>Amazon AWS</h2>
