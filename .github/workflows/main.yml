@@ -35,7 +35,7 @@ jobs:
           target: "~/app/near-test"
           
       - name: Update API
-      - uses: appleboy/scp-action@v0.1.4
+        uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
