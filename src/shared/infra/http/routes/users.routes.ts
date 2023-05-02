@@ -7,7 +7,7 @@ const usersRoutes = Router()
 
 
 usersRoutes.get('/', (req, res) =>{
-    res.sendStatus(200).send({message: "Bem vindo (a), nessa mesma URL insira um nome do usuario do GITHUB. Exemplo http://example/users/name"})
+    res.status(200).json({message: "Bem vindo (a), nessa mesma URL insira um nome do usuario do GITHUB. Exemplo http://example/users/name"})
 })
 
 usersRoutes.get('/:name', listUsersByNameController.handle)
