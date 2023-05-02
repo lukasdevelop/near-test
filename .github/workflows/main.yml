@@ -32,4 +32,4 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_key }}
           source: "., !node_modules"
-          target: "test"
+          target: "~/app/near-test"
