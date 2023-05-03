@@ -7,7 +7,7 @@
 </h1>
 <p align="center">🚀 API Rest para listar por nomes os usuários do Github</p>
 <h1>Arquitetura</h1>
-<h2>Domain-Driven Design - DDD e SOLID</h2>
+<h2>Clean Arquitecture com DDD e SOLID</h2>
 <img src="imgs/ddd.png" />
 <h4>
     <p>Cada Dominio tem seu próprio Módulo, com sua respectiva Entidade. Assim como os Repositórios, que segue com sua Interface e a Implementação da mesma, fazendo assim a <strong>Inversão de Dependência</strong>, quem deseja usar o repositório deve obrigatóriamente utilizar sua Interface.</p>
