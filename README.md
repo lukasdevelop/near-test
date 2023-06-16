@@ -54,6 +54,6 @@
 <h4>Também foi feito a CI pelo próprio Github Actions para demonstração de Integração Contínua, no caso, quando é feito o push na branch Master. No EC2 também está sendo feito a <strong>gerência do App com o PM2.</strong></h4>
 <h4>Arquivo main.yml para checagem: <a href="https://github.com/lukasdevelop/near-test/blob/master/.github/workflows/main.yml">main.yml</a></h4>
 
-<h4>🚀Muito obrigado pela oportunidade.🚀</h4>
+<h4>🚀Muito obrigado pela oportunidade. Sera ?🚀</h4>
 <h4>Autor: Lucas Amaral</h4>
 <h4>Email: analista.sistemas.lucas@gmail.com</h4>
